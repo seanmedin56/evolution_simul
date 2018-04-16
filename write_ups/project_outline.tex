@@ -1,0 +1,136 @@
+% Search for all the places that say "PUT SOMETHING HERE".
+
+\documentclass[11pt]{article}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+
+\def\Name{Sean Medin}  % Your name
+
+
+\title{Modeling Evolution with Changing Selection Pressure}
+\author{\Name}
+\pagestyle{myheadings}
+\date{}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+\begin{document}
+\maketitle
+
+
+\section*{Overview}
+
+	My plan is to create a program to model how the distribution of genotypes in a population changes under a gradually changing selection pressure. Each genome has some birth and death rate based on the selection pressure. Whenever an organism in the population reproduces, each `gene' has some probability of mutating.
+
+
+\section*{Variables and Functions}
+
+	\begin{enumerate}
+		
+		\item
+		g: genome (represented by an array of values)
+		
+		\item
+		$\mu(t)$: mutation rate at time $t$
+		
+		\item
+		$s(t)$: selection pressure at time $t$
+		
+		\item
+		$b(g,t)$: birth rate for genome $g$ and time $t$
+		
+		\item
+		$d(g,t)$: death rate for genome $g$ and time $t$
+		
+		\item
+		$G(t)$: array of genomes of surviving organisms (changes with time)
+		
+		
+	\end{enumerate}
+	
+\section*{Specific Model}
+
+	The specific model I want to explore is as follows:
+	
+	\begin{enumerate}
+	
+		\item
+		There will be a population of N asexually reproducing organisms each with n binary genes that can be `0' or `1'. All organisms start with having every gene be `0'. The gene `0' indicates that it is beneficial for devouring one food resource, while `1' means the gene is good for eating the other food resource.
+		\item
+		There are two food resources available. The genotype of an organism, the availability of each food, and the population size determines the birth rate of an organism. If m is the number of genes that have the value of `0', then the birth rate per generation for each organism $k$ is
+		
+		\begin{equation*}
+			(\frac{m_k}{n}(b_0 + r_0(m,n))e^{\frac{-1}{C_0}\sum{\frac{m_i}{n}}} + \frac{n - m_k}{n}(b_1 + r_1(m,n))e^{\frac{-1}{C_1}\sum{\frac{n - m_i}{n}}})e^{\frac{-N}{C_2}}
+		\end{equation*}
+		
+		where $r_0(m,n) = a_0 > 0$ when $m = n$ and $0$ otherwise and $r_1(m,n) = a_1 > 0$ when $m = 0$ and 0 otherwise. $a_0$ and $a_1$ are the fitness advantages given to organisms that have a single food pathway. $C_0$ and $C_1$ are the carrying capacities for each food resource. $C_2$ is the carrying capacity for a third resource that both types of the organism need. $b_0$ and $b_1$ are the birth rates (ignoring the rewards for having all the genes be beneficial for a single food) without any competition for food resources 1 and 2 respectively.
+		
+		
+		\item
+		The death rate of each organism is constant.
+		
+		\item
+		The mutation rate $\mu$ is constant.
+		
+		
+	\end{enumerate}
+	
+\section*{Expected Mathematical Limits of Interest}
+
+	\subsection*{Pure Equilibria}
+	
+	Let's call the food that all the organisms consume food $i$ and the food none of the organisms consume food $j$. We have a pure and stable equilibrium for food $i$ if
+	
+	\begin{equation*}
+		(b_i + a_i)e^{-N(\frac{1}{C_i} + \frac{1}{C_2})} \approx d
+	\end{equation*}
+	
+	and if
+	
+	\begin{equation*}
+		(\frac{b_i}{n} + a_i)e^{-\frac{N}{C_i}} > \frac{b_j}{n}
+	\end{equation*}
+	
+	assuming the probability of having more than one mutation at one time is negligible (or that $n$ is large enough that it doesn't matter) and that $C_i$ and $C_j$ are both much larger than 1. (Note: $N$ is the population and $d$ is the death rate).
+	
+	\subsection*{Other Equilibria}
+	
+	In general, there are no truly stable equilibria (at least in the case of large $C_0$ and $C_1$) that involve organisms containing both genes. There are unstable equilibria where changing one gene does not effect the birth rate of the organisms, but ultimately neutral drift will settle on all organisms having all of one gene or another due to the reward of having all of one gene. We have a stable equilibrium involving the two species when 
+	
+	\begin{equation*}
+		(b_i + a_i)e^{-(\frac{N_i}{C_i} + \frac{N}{C_2})} \approx (b_j + a_j)e^{-(\frac{N_j}{C_j} + \frac{N}{C_2})} \approx d
+	\end{equation*}
+	
+	where $N_i$ and $N_j$ are the number of organsims that consume food resources $i$ and $j$ respectively. There is a case in which one organism would be expected to out compete the other and that's if:
+	
+	\begin{equation*}
+		(b_i + a_i)e^{-(\frac{N_i}{C_i} + \frac{N}{C_2})} > d
+	\end{equation*}
+	
+	and
+	
+	\begin{equation*}
+		(b_j + a_j)e^{\frac{-N}{C_2}} < d
+	\end{equation*}
+
+\section*{Computational Exploration}
+
+	\begin{enumerate}
+		
+		\item
+		Starting with all organisms consuming food type `0', how quickly can I reduce $C_0$ so that the population survives with high probability?
+		
+		\item
+		How long must $C_0$ be low before the population stably shifts to consuming food type `1'?
+		
+		\item
+		If $b_0$ and $b_1$ are below the death rate, but $r_0$ and $r_1$ are large, how to the answers to the first two questions change for varying $n$, $C_2$, and $\mu$?
+		
+	\end{enumerate}
+
+
+\end{document}
