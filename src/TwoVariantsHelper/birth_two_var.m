@@ -27,7 +27,7 @@ elseif m == num_genes
 end
 rate = ((m / num_genes) * (birth1 + r1) * exp(-food1_pop / cap1) + ...
     (1 - m / num_genes) * (birth2 + r2) * exp(-food2_pop / cap2)) *  ...
-    exp(total_pop / cap_all);
+    exp(-total_pop / cap_all);
 
 births = random('bino',dist(gene),rate);
 

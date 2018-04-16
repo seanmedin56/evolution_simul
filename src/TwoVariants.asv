@@ -1,10 +1,7 @@
 % This model looks at what happens when an organism has two food sources
 % and which food source it eats depends on the genes. There is also another
-% mutually constraining resource. At the beginning all the organisms eat
-% the same food resource, but that resource dwindles with time causing the
-% organisms to start to eat the other food resource.
-% The birth rate changes according to the population size and what food 
-% each organism eats. 
+% mutually constraining resource. At the beginning al The birth rate changes according to the
+% population size and what food each organism eats. 
 
 addpath('TwoVariantsHelper/');
 

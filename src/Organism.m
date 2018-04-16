@@ -113,7 +113,8 @@ classdef Organism
             figure();
             leg = labels;
             
-            for gene = gs
+            for i = 1:length(gs)
+                gene = gs{i};
                 if logscale
                     semilogy(obj.history(gene))
                 else
