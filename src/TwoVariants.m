@@ -8,13 +8,13 @@
 
 addpath('TwoVariantsHelper/');
 
-num_genes = 10;
+num_genes = 5;
 
 mutation_rate = .001;
 
-population_start = 10000;
+population_start = 11500;
 
-death_rate = .07;
+death_rate = .05;
 
 birth1 = .5;
 
@@ -26,13 +26,13 @@ reward2 = .25;
 
 food1_start = 18000;
 
-food1_slope = 0;
+food1_slope = 50;
 
-food2_start = 20000;
+food2_start = 18000;
 
 food_shared = 5500;
 
-num_generations = 1500;
+num_generations = 500;
 
 b= @(gene,t,dist) birth_two_var(birth1,birth2,reward1,reward2,food1_start, ...
     food1_slope,food2_start,food_shared,num_genes,gene,dist,t);
@@ -47,7 +47,7 @@ for i = 1:length(classes)
     classes{i} = int2str(i-1);
     start_pops{i} = 0;
 end
-start_pops{11} = population_start;
+start_pops{num_genes + 1} = population_start;
 
 start = containers.Map(classes,start_pops);
 

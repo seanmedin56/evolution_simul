@@ -26,7 +26,7 @@
 \section*{Birth Rate Equation}
 
 	\begin{equation*}
-			(\frac{m_k}{n}(b_0 + r_0(m,n))e^{\frac{-1}{C_0}\sum{\frac{m_i}{n}}} + \frac{n - m_k}{n}(b_1 + r_1(m,n))e^{\frac{-1}{C_1}\sum{\frac{n - m_i}{n}}})e^{\frac{-N}{C_2}}
+			(\frac{m_k}{n}(b_1 + r_1(m,n))e^{\frac{-1}{C_1}\sum{\frac{m_i}{n}}} + \frac{n - m_k}{n}(b_2 + r_2(m,n))e^{\frac{-1}{C_2}\sum{\frac{n - m_i}{n}}})e^{\frac{-N}{C_0}}
 		\end{equation*}
 		
 \section*{Built in Features of System}
@@ -34,10 +34,10 @@
 \begin{enumerate}
 
 	\item
-	The mutual resource ($C_2$) is small enough and/or the rewards ($a_i$) for homogeneity are large enough that when:
+	The mutual resource ($C_0$) is small enough and/or the rewards ($a_i$) for homogeneity are large enough that when:
 	
 	\begin{equation} \label{eq:1}
-		(b_i + a_i)e^{-N(\frac{1}{C_i} + \frac{1}{C_2})} \approx d
+		(b_i + a_i)e^{-N(\frac{1}{C_i} + \frac{1}{C_0})} \approx d
 	\end{equation}
 	
 	where $i$ represents the dominant food source, we also have the condition that:
