@@ -59,12 +59,7 @@ classdef Organism
             %   m: function for introducing mutations to the offspring of
             %   organisms(must be a function of the genotype, the number of 
             %   births, and the time)
-            %   b: function for the birth rate (function of the genotype,
-            %   the time, and the total poulation)
-            %   d: functon for the death rate (function of the genotype,
-            %   the time, and the total population)
-            %   G_0: initial number of organisms with each genotype in the
-            %   population
+            %   b: function for the birth rate (function of the genotype
             obj.genes = gs;
             obj.mutate = m;
             obj.birth_rate = b;
@@ -76,14 +71,12 @@ classdef Organism
                 tot = tot + G_0(keys_iter{i});
                 obj.history(keys_iter{i}) = G_0(keys_iter{i});
             end
-            obj.history_pop = tot;
+            obj.history_pop = tot; %evolutionary dynamics martin nowak
         end
         
         function obj = evolve(obj,dt)
-            %Evolves the organism or dt time steps (where dt is an integer)
-            %   Returns a new evolved Organism (note that the original
-            %   organism will be only partially modified. The evolved
-            %   organism only comes from the obj returned by this function
+            %METHOD1 Summary of this method goes here
+            %   Detailed explanation goes here
             for j = 1:dt
                 pop = obj.history_pop(obj.T);
                 obj.T = obj.T + 1;

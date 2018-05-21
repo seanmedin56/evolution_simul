@@ -1,7 +1,9 @@
 addpath('TwoVariantsHelper/');
 
 % Plots time to reach 'equilibirium' vs number of genes for TwoVariants
-% Organism
+% Organism (note: this method is irrelevant to the current version of
+% TwoVariants. It was used when the food resource for the dominant organism
+% constantly decreased with time.)
 
 %universal variables
 mutation_rate = .001;

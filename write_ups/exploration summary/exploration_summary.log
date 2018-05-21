@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.19)  24 APR 2018 21:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.19)  21 MAY 2018 11:15
 entering extended mode
 **./exploration_summary.tex
 (exploration_summary.tex
@@ -339,78 +339,52 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 24.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+
+ []
+
 [1
 
 {C:/Users/seanm/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Package epstopdf Info: Source file: <pics/stable_equil.eps>
-(epstopdf)                    date: 2018-04-17 22:08:13
-(epstopdf)                    size: 59976 bytes
-(epstopdf)             Output file: <pics/stable_equil-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-04-17 22:09:16
-(epstopdf)                    size: 15356 bytes
-(epstopdf)             Command: <epstopdf --outfile=pics/stable_equil-eps-converted-to.pdf pics/stable_equil.eps>
-(epstopdf)             \includegraphics on input line 81.
-Package epstopdf Info: Output file is already uptodate.
-<pics/stable_equil-eps-converted-to.pdf, id=18, pagebox=cropbox, 598.235pt x 461.725pt>
-File: pics/stable_equil-eps-converted-to.pdf Graphic file (type pdf)
-<use pics/stable_equil-eps-converted-to.pdf>
-Package pdftex.def Info: pics/stable_equil-eps-converted-to.pdf  used on input line 81. on input line 81.
-Package pdftex.def Info: Requested size: 478.58865pt x 369.38051pt on input line 81.
+<pics/stable_equil.png, id=18, 747.54282pt x 577.40718pt>
+File: pics/stable_equil.png Graphic file (type png)
+<use pics/stable_equil.png>
+Package pdftex.def Info: pics/stable_equil.png  used on input line 98. on input line 98.
+Package pdftex.def Info: Requested size: 448.52916pt x 346.44698pt on input line 98.
+ [2]
+<pics/unstable_equil.png, id=22, 679.03688pt x 583.42969pt>
+File: pics/unstable_equil.png Graphic file (type png)
+<use pics/unstable_equil.png>
+Package pdftex.def Info: pics/unstable_equil.png  used on input line 104. on input line 104.
+Package pdftex.def Info: Requested size: 407.42526pt x 350.0605pt on input line 104.
+ [3 <./pics/stable_equil.png (PNG copy)>]
+<pics/evolution_ex.png, id=26, 733.99219pt x 548.80031pt>
+File: pics/evolution_ex.png Graphic file (type png)
+<use pics/evolution_ex.png>
+Package pdftex.def Info: pics/evolution_ex.png  used on input line 108. on input line 108.
+Package pdftex.def Info: Requested size: 440.3987pt x 329.28271pt on input line 108.
 
-Overfull \hbox (25.83366pt too wide) in paragraph at lines 81--82
-[][] 
- []
-
-Package epstopdf Info: Source file: <pics/unstable_equil.eps>
-(epstopdf)                    date: 2018-04-17 23:19:23
-(epstopdf)                    size: 1486511 bytes
-(epstopdf)             Output file: <pics/unstable_equil-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-04-17 23:19:42
-(epstopdf)                    size: 313459 bytes
-(epstopdf)             Command: <epstopdf --outfile=pics/unstable_equil-eps-converted-to.pdf pics/unstable_equil.eps>
-(epstopdf)             \includegraphics on input line 87.
-Package epstopdf Info: Output file is already uptodate.
-<pics/unstable_equil-eps-converted-to.pdf, id=19, pagebox=cropbox, 543.02875pt x 466.74374pt>
-File: pics/unstable_equil-eps-converted-to.pdf Graphic file (type pdf)
-<use pics/unstable_equil-eps-converted-to.pdf>
-Package pdftex.def Info: pics/unstable_equil-eps-converted-to.pdf  used on input line 87. on input line 87.
-Package pdftex.def Info: Requested size: 434.42357pt x 373.3955pt on input line 87.
-[2 <./pics/stable_equil-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <pics/evolution_ex.eps>
-(epstopdf)                    date: 2018-04-18 09:41:21
-(epstopdf)                    size: 362697 bytes
-(epstopdf)             Output file: <pics/evolution_ex-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-04-18 09:41:41
-(epstopdf)                    size: 56487 bytes
-(epstopdf)             Command: <epstopdf --outfile=pics/evolution_ex-eps-converted-to.pdf pics/evolution_ex.eps>
-(epstopdf)             \includegraphics on input line 91.
-Package epstopdf Info: Output file is already uptodate.
-<pics/evolution_ex-eps-converted-to.pdf, id=27, pagebox=cropbox, 587.19376pt x 438.63875pt>
-File: pics/evolution_ex-eps-converted-to.pdf Graphic file (type pdf)
-<use pics/evolution_ex-eps-converted-to.pdf>
-Package pdftex.def Info: pics/evolution_ex-eps-converted-to.pdf  used on input line 91. on input line 91.
-Package pdftex.def Info: Requested size: 469.75565pt x 350.91147pt on input line 91.
- [3 <./pics/unstable_equil-eps-converted-to.pdf>] [4 <./pics/evolution_ex-eps-converted-to.pdf>] (exploration_summary.au
-x) ) 
+[4 <./pics/unstable_equil.png (PNG copy)>] [5 <./pics/evolution_ex.png (PNG copy)>] (exploration_summary.aux) ) 
 Here is how much of TeX's memory you used:
- 3323 strings out of 493312
- 46076 string characters out of 3138898
+ 3311 strings out of 493312
+ 45746 string characters out of 3138898
  107354 words of memory out of 3000000
  6806 multiletter control sequences out of 15000+200000
  11397 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,26p,654b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on exploration_summary.pdf (4 pages, 516055 bytes).
+ 41i,6n,26p,741b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+mextra/cmex8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on exploration_summary.pdf (5 pages, 297392 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
+ 73 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

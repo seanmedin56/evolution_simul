@@ -1,8 +1,7 @@
 % This model looks at what happens when an organism has two food sources
 % and which food source it eats depends on the genes. There is also another
-% mutually constraining resource. The food changes dynamically (see contents
-% of TwoVariantsHelper for more info). This dynamic food change is accounted 
-% for in the birth_two_var method in TwoVariantsHelper).
+% mutually constraining resource. The food changes dynamically (see conten. This
+% dynamic food change is accounted for in the birth_two_var method
 % The birth rate changes according to the population size and what food 
 % each organism eats. 
 
@@ -53,6 +52,4 @@ start = containers.Map(classes,start_pops);
 two_var = Organism(num_genes,m,b,d,start);
 
 two_var = evolve(two_var,num_generations);
-
-display_hist(two_var,classes,classes,true,false);
 

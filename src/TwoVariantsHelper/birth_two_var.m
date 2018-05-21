@@ -1,11 +1,12 @@
 function births = birth_two_var(birth1, birth2, reward1, reward2, ...
-    cap1_start, cap1_slope, cap2, cap_all, num_genes, gene, dist, t)
+    cap1_start, period, cap2_start, cap_all, num_genes, gene, dist, t)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
 m = str2num(gene);
 
-cap1 = max(cap1_start - t * cap1_slope, .0001);
+cap1 = (1 + cos(2 * pi * t / period)) * cap1_start / 2;
+cap2 = (1 - cos(2 * pi * t / period)) * cap2_start / 2;
 
 food1_pop = 0;
 food2_pop = 0;
