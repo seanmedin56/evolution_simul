@@ -50,7 +50,7 @@ end
 
 start = containers.Map(classes,start_pops);
 
-two_var = Organism(num_genes,m,b,d,start);
+two_var = Organism(m,b,d,start);
 
 two_var = evolve(two_var,num_generations);
 

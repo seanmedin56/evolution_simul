@@ -7,10 +7,6 @@ classdef Organism
     %   death and birth rates) the composition of the population.
     
     properties
-        %array of possible genomes where length of the array is the number
-        %of possible genes and each entry represents the number of options
-        %per gene
-        genes 
         
         %function that takes in a gene and its frequency and returns a
         %distribution of new gemomes
@@ -52,10 +48,8 @@ classdef Organism
             obj.history_pop = hist_pop;
         end        
         
-        function obj = Organism(gs,m,b,d,G_0)
+        function obj = Organism(m,b,d,G_0)
             % Defines the organism
-            %   gs: array where each entry represents a gene and the entry
-            %   specifies the number of options for each gene
             %   m: function for introducing mutations to the offspring of
             %   organisms(must be a function of the genotype, the number of 
             %   births, and the time)
@@ -65,18 +59,20 @@ classdef Organism
             %   the time, and the total population)
             %   G_0: initial number of organisms with each genotype in the
             %   population
-            obj.genes = gs;
             obj.mutate = m;
             obj.birth_rate = b;
             obj.death_rate = d;
             obj.G = G_0;
             tot = 0;
             keys_iter = keys(G_0);
+            obj.history = containers.Map('KeyType','char','ValueType','any');
             for i = 1:length(keys_iter)
                 tot = tot + G_0(keys_iter{i});
                 obj.history(keys_iter{i}) = G_0(keys_iter{i});
             end
             obj.history_pop = tot;
+            obj.T = 1;
+            
         end
         
         function obj = evolve(obj,dt)
@@ -108,17 +104,23 @@ classdef Organism
                     end
                 end
                 key_iter = keys(new_distrib);
-                for i = 1:length(key_iter)
+                for i = 1:length(key_iter) 
                     key = key_iter{i};
                     if ~isKey(obj.G,key)
                         obj.G(key) = 0;
-                        obj.history(key) = zeros(obj.T - 1);
+                        obj.history(key) = zeros(1,obj.T - 1);
                     end
                     pop = pop + new_distrib(key);
                     obj.G(key) = obj.G(key) + new_distrib(key);
                     obj.history(key) = [obj.history(key) obj.G(key)];
+                    if length(obj.history(key)) > obj.T
+                        stop = true;
+                    end
                 end
                 obj.history_pop(obj.T) = pop;
+                if length(obj.history_pop) > obj.T
+                    stop = true;
+                end
             end
             
         end

@@ -13,7 +13,7 @@ d = @(gene,t,dist) death(gene,t,dist(gene));
 
 start = containers.Map({'1','2'},{[100000],[0]});
 
-test1 = Organism(genes,m,b,d,start);
+test1 = Organism(m,b,d,start);
 
 test1 = evolve(test1,150);
 
