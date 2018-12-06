@@ -13,7 +13,7 @@ function start_pop = initialize_pop(pop_size, num_kill, num_met)
     for i = 1:length(start_pops)
         start_pops{i} = 0;
     end
-    start_pops{1} = pop_size;
+    start_pops{2} = pop_size;
     start_pop = containers.Map(classes, start_pops);
 end
 
